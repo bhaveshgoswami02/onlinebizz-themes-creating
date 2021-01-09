@@ -1,0 +1,22 @@
+<app-website-loader *ngIf="!_themeService.data || !_themeService.isBrowser"></app-website-loader>
+<app-theme1 *ngIf="_themeService.data?.theme==1"></app-theme1>
+<!-- <app-second-theme *ngIf="_themeService.data?.theme==2"></app-second-theme>
+<app-third-theme *ngIf="_themeService.data?.theme==3"></app-third-theme>
+<app-forth-theme *ngIf="_themeService.data?.theme==4"></app-forth-theme>
+<app-five-theme *ngIf="_themeService.data?.theme==5"></app-five-theme> -->
+
+
+<div style="position: fixed;bottom: 6em;right: 19px;z-index: 999999;">
+  <button type="button" class="btn__share shadow" style="padding:15px 20px;"
+  *ngIf="_themeService.data && this._themeService.ngNavigatorShareService.canShare()"
+    (click)='_themeService.share(file)'><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-share-fill"
+      fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd"
+        d="M12.024 3.797L4.499 7.56l-.448-.895 7.525-3.762.448.894zm-.448 9.3L4.051 9.335 4.5 8.44l7.525 3.763-.448.894z" />
+      <path fill-rule="evenodd"
+        d="M13.5 5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-5.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+    </svg>
+  </button>
+  <img *ngIf="_themeService.data?.metaTags?.imageUrl" style="display: none;" (load)="onImageLoad()" #share crossorigin
+    [src]="_themeService.data.metaTags.imageUrl" alt="">
+</div>

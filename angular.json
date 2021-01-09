@@ -121,8 +121,16 @@
               "devServerTarget": "onlinebizz-theme-creating:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "onlinebizz-theme-creating"
+    }
+  },
+  "defaultProject": "onlinebizz-theme-creating",
+  "cli": {
+    "analytics": "ed04ef69-acd1-411d-b07c-f892a47ac47e"
+  }
 }

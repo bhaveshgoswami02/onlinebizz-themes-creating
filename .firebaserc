@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "onlinebizz-test": {
+      "hosting": {
+        "onlinebizz-theme-creating": [
+          "onlinebizz-test"
+        ]
+      }
+    }
+  }
+}

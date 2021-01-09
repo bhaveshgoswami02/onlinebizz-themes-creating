@@ -1,0 +1,60 @@
+
+<app-navigation></app-navigation>
+
+<ng-container *ngIf="selectedPage=='home'">
+    <app-home></app-home>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='services'">
+    <app-services></app-services>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='serviceDetails'">
+    <app-service-details></app-service-details>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='products'">
+    <app-products></app-products>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='productDetails'">
+    <app-product-details></app-product-details>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='about'">
+    <app-about></app-about>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='contact'">
+    <app-contact></app-contact>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='gallery'">
+    <app-gallery></app-gallery>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='videoGallery'">
+    <app-video></app-video>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='payments'">
+    <app-payments></app-payments>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='cart'">
+    <app-cart></app-cart>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='checkout'">
+    <app-checkout></app-checkout>
+</ng-container>
+
+<ng-container *ngIf="selectedPage=='order-successful'">
+    <app-order-successful></app-order-successful>
+</ng-container>
+
+<ng-container *ngIf="selectedPage!='home' && selectedPage!='services' && selectedPage!='serviceDetails' && selectedPage!='products' && selectedPage!='productDetails' && selectedPage!='about' && selectedPage!='gallery' && selectedPage!='payments' && selectedPage!='contact'">
+    <app-custom-page [selectedPage]="selectedPage"></app-custom-page>
+</ng-container>
+
+<app-footer></app-footer>
